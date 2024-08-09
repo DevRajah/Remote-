@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    font-family: "Epilogue";
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    color: hsl(0, 0%, 41%);
+
+    .resp-menu{
+        display: none;
+    }
+    .resp-menu img{
+        width: 60px;
+    }
+  }
+  .btns{
+    display: flex;
+    gap: 12px;
+    padding: 8px;
+    color: hsl(0, 0%, 41%);
+  }
+.btns :nth-child(1){
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 41%);
+    border: none !important;
+    font-family: "Epilogue";
+}
+
+.btns :nth-child(2){
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 41%);
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 8px;
+    padding: 8px;
+    font-family: "Epilogue";
+}
+.navagations {
+    display: flex;
+    align-items: flex-start;
+    
+    img {
+        padding-right: 12px;
+    }
+  
+    nav {
+      margin: 0px 10px;
+      font-weight: 500;
+      font-size: 12px;
+      cursor: pointer;
+    }
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.dropdown-sign {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px; 
+    vertical-align: middle; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid hsl(0, 0%, 41%);
+}
+.nav-item:hover .dropdown-sign {
+    border-top-color: hsl(0, 0%, 8%);
+}
+
+
+.heroImage-mob{
+    display: none;
+}
+.heropage {
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+    justify-content: space-between;
+
+    .hero-text-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 35px;
+        margin-left: 60px;
+    }
+    
+    span p{
+        font-size: 18px;
+    }
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: hsl(0, 0%, 41%);
+    }
+    .heroTextBox {
+        font-size: 60px;
+        font-weight: 700;
+        color: hsl(0, 0%, 8%);
+    }
+
+    .hero-text-wrapper button {
+        width: 30%;
+        background-color: hsl(0, 0%, 8%);
+        border: none !important;
+        border-radius: 8px;
+        height: 30px;
+        color: white !important;
+        font-family: "Epilogue";
+        font-weight: 500;
+    }
+    .hero-text-imgs{
+        margin: 15px;
+    }
+    .hero-text-imgs img{
+        padding-right: 12px;
+        width: 60px;
+    }
+
+    .heroImage {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .heroImage img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body{
+        overflow-y: scroll;
+    }
+    .heroImage-mob{
+        display: block;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .heroImage-mob img{
+        width: 100vw;
+        height: 30vh;
+    }
+    .navagations nav{
+        display: none;
+    }
+    /* .header{
+        height: 90px;
+    } */
+    .header .resp-menu{
+        display: block;
+    }
+    .header .btns{
+        display: none;
+    }
+    .heropage{
+        flex-wrap: wrap;
+        .heroTextBox {
+            font-size: 24px;
+        }
+        span p {
+            font-size: 12px;
+        }
+        .hero-text-wrapper {
+            width: 100vw;
+        }
+    }
+    .heropage {
+        .hero-text-wrapper {
+        margin-left: 0;
+        align-items: center;
+    }
+    .heroImage img{
+        display: none;
+    }
+    .hero-text{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text-imgs img{
+        width: 40px;
+    }
+    .hero-text-wrapper button {
+        width: 50%;
+    }
+}
+    
+}
